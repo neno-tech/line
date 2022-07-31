@@ -1,0 +1,24 @@
+<html>
+<body>
+<img id="pictureUrl">
+<p id="userId"><bzuserId:</b></p>
+<p id="displayName"><b>displayName:</b></p>
+<p id="statusMessage"><b>statusMessage:</b> </p>
+<p id="decodedIDToken"><b>email:</b></p>
+<scriptsrc="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+<script>
+async function getUserprofile() (
+const profile = await liff.getprofile()
+document.getElementById("pictureUrl").src = profile.pictureurl
+document .getElementById("userId").append(profile.userId)
+document.getElementById("statusMessage"). append(profile.statusMessage)
+document .getElementById("displayName"). append(profile.displayName)
+document .getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
+async function main()
+await liff.init(( liffId: : "1657345952-QbM1WlBD', withLoginonExternalBrowser: true ))
+if (liff.isLoggedIn()) (
+getUserProfile()
+main()
+</script>
+</body>
+</html>
