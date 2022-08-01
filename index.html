@@ -22,8 +22,8 @@
                        <p id="userId"></p>
                         <p id="displayName"></p>
                         <p id="statusMessage"></p>
-<!--                         <p id="getDecodedIDToken"></p> -->
-                        <a href="#" class="btn btn-primary">Log out</a>
+                        <p id="getDecodedIDToken"></p>
+                        <button class="btn btn-primary" onclick="logout()">Log out</button>
                     </div>
                 </div>
             </div>
@@ -37,6 +37,10 @@
   <p id="getDecodedIDToken"></p> -->
   <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
   <script>
+    function logOut() {
+      liff.logout()
+      window.location.reload()
+    }
     function runApp() {
       liff.getProfile().then(profile => {
         document.getElementById("pictureUrl").src = profile.pictureUrl;
