@@ -35,7 +35,7 @@
       liff.logout()
       window.location.reload()
     }
-    function runApp() {
+  async function runApp() {
       liff.getProfile().then(profile => {
         document.getElementById("pictureUrl").src = profile.pictureUrl;
         document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
@@ -44,7 +44,7 @@
         document.getElementById("decodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
       }).catch(err => console.error(err));
     }
-    liff.init({ liffId: "1657345952-QbM1WlBD", withLoginonExternalBrowser: true }, () => {
+   await liff.init({ liffId: "1657345952-QbM1WlBD", withLoginonExternalBrowser: true }, () => {
       if (liff.isLoggedIn()) {
         runApp()
       } else {
