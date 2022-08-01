@@ -31,7 +31,7 @@
         await liff.init({ liffId: "1657345952-QbM1WlBD", withLoginonExternalBrowser: true })
         if (liff.isLoggedIn()) {
           getUserProfile()
-        }
+        }else{ liff.login();}
       }
       main()
     </script>
