@@ -44,7 +44,7 @@
         document.getElementById("decodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
       }).catch(err => console.error(err));
     }
-   await liff.init({ liffId: "1657345952-QbM1WlBD", withLoginonExternalBrowser: true }, () => {
+   liff.init({ liffId: "1657345952-QbM1WlBD", withLoginonExternalBrowser: true }, () => {
       if (liff.isLoggedIn()) {
         runApp()
       } else {
