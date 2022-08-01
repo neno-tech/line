@@ -17,7 +17,7 @@
         <div class="row justify-content-center align-items-center vh-100">
             <div class="col-sm-8 col-md-6 col-lg-4 bg-white p-4 rounded shadow">
                 <div class="card text-center">
-                    <img id="pictureUrl" width="20%" class="card-img-top ">
+                    <img id="pictureUrl" style="width:20%" class="card-img-top ">
                     <div class="card-body">
                        <p id="userId"></p>
                         <p id="displayName"></p>
@@ -29,12 +29,6 @@
             </div>
         </div>
     </div>
-<!--   <h3>Welcome </h3>
-  <img id="pictureUrl" width="25%">
-  <p id="userId"></p>
-  <p id="displayName"></p>
-  <p id="statusMessage"></p>
-  <p id="getDecodedIDToken"></p> -->
   <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
   <script>
     function logOut() {
@@ -60,45 +54,3 @@
   </script>
 </body>
 </html>
-  
-<!-- <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LIFF - LINE Front-end Framework</title>
-  <style>
-    body { margin: 16px }
-    button, img { display: none; width: 40% }
-    button { padding: 16px }
-  </style>
-</head>
-<body>
-  <h1>LIFF </h1>
-  <img id="pictureUrl">
-  <p id="userId"><b>userId:</b></p>
-  <p id="displayName"><b>displayName:</b></p>
-  <p id="statusMessage"><b>statusMessage:</b> </p>
-  <p id="decodedIDToken"><b>email:</b></p>
-  <scriptsrc="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-    <script>
-      window.onload = ()=>{main()}
-      async function getUserprofile() {
-        const profile = await liff.getprofile()
-        document.getElementById("pictureUrl").src = profile.pictureurl
-        document.getElementById("userId").append(profile.userId)
-        document.getElementById("statusMessage").append(profile.statusMessage)
-        document.getElementById("displayName").append(profile.displayName)
-        document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
-      }
-      async function main() {
-        await liff.init({ liffId: "1657345952-QbM1WlBD", withLoginonExternalBrowser: true })
-        if (liff.isLoggedIn()) {
-          getUserProfile()
-        }else{ liff.login();}
-      }
-      
-    </script>
-</body>
-
-</html> -->
