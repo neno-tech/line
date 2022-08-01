@@ -19,6 +19,7 @@
   <p id="decodedIDToken"><b>email:</b></p>
   <scriptsrc="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
     <script>
+      window.onload = ()=>{main()}
       async function getUserprofile() {
         const profile = await liff.getprofile()
         document.getElementById("pictureUrl").src = profile.pictureurl
@@ -33,7 +34,7 @@
           getUserProfile()
         }else{ liff.login();}
       }
-      main()
+      
     </script>
 </body>
 
