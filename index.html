@@ -35,7 +35,7 @@
       liff.logout()
       window.location.reload()
     }
-  async function runApp() {
+  function runApp() {
       liff.getProfile().then(profile => {
         document.getElementById("pictureUrl").src = profile.pictureUrl;
         document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
