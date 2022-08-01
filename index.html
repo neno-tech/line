@@ -35,13 +35,13 @@
       liff.logout()
       window.location.reload()
     }
-  async function runApp() {
-  await liff.getProfile().then(profile => {
+   function runApp() {
+ async liff.getProfile().then(profile => {
         document.getElementById("pictureUrl").src = profile.pictureUrl;
         document.getElementById("userId").innerHTML = '<b>UserId:</b> ' + profile.userId;
         document.getElementById("displayName").innerHTML = '<b>DisplayName:</b> ' + profile.displayName;
         document.getElementById("statusMessage").innerHTML = '<b>StatusMessage:</b> ' + profile.statusMessage;
-        document.getElementById("decodedIDToken").innerHTML = '<b>Email:</b> ' + liff.getDecodedIDToken().email;
+        document.getElementById("decodedIDToken").innerHTML = '<b>Email:</b> ' + await liff.getDecodedIDToken().email;
       }).catch(err => console.error(err));
     }
    liff.init({ liffId: "1657345952-QbM1WlBD", withLoginonExternalBrowser: true }, () => {
