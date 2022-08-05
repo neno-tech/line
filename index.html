@@ -24,7 +24,6 @@
                         <p id="statusMessage"></p>
                         <p id="decodedIDToken"></p>
                         <button class="btn btn-primary" onclick="logOut()">Log out</button><br><br>
-                       <button class="btn btn-info" onclick="close()">Close</button>
                     </div>
                 </div>
             </div>
@@ -35,9 +34,6 @@
     function logOut() {
       liff.logout()
       window.location.reload()
-    }
-        function close() {
-       liff.closeWindow()
     }
    function runApp() {
   liff.getProfile().then(profile => {
