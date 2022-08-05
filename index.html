@@ -23,8 +23,8 @@
                         <p id="displayName"></p>
                         <p id="statusMessage"></p>
                         <p id="decodedIDToken"></p>
-                        <button class="btn btn-primary" onclick="logOut()">Log out</button><br>
-                       <button class="btn btn-info" onclick="close()">Log out</button>
+                        <button class="btn btn-primary" onclick="logOut()">Log out</button><br><br>
+                       <button class="btn btn-info" onclick="close()">Close</button>
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@
       window.location.reload()
     }
         function close() {
-       window.close()
+       liff.closeWindow() 
     }
    function runApp() {
   liff.getProfile().then(profile => {
